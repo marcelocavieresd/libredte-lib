@@ -1,21 +1,6 @@
 {
-    "name": "sasco/libredte",
-    "description": "Biblioteca para trabajo con DTE del SII de Chile",
-    "type": "library",
-    "keywords": ["dte", "sii", "facturación electrónica"],
-    "homepage": "https://libredte.cl",
-    "license": "AGPL-3.0+",
-    "authors": [
-        {
-            "name": "SASCO SpA",
-            "homepage": "https://sasco.cl"
-        }
-    ],
-    "support": {
-        "issues": "https://github.com/LibreDTE/libredte-lib/issues",
-        "forum": "https://groups.google.com/forum/#!forum/libredte",
-        "source": "https://github.com/LibreDTE/libredte-lib"
-    },
+    "name": "marcelocavieresd/libredte-lib",
+    "description": "LibreDTEFork",
     "require": {
         "php": ">=5.5",
         "ext-curl": "*",
@@ -24,11 +9,5 @@
         "phpseclib/phpseclib": "2.0.6",
         "tecnickcom/tcpdf": "6.2.13",
         "mike42/escpos-php": "2.0.1"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "6.4.*"
-    },
-    "autoload": {
-        "psr-4": {"sasco\\LibreDTE\\": "lib/"}
     }
 }
