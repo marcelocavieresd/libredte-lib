@@ -81,13 +81,8 @@ class FirmaElectronica
         ], $config);
         // cargar firma electrónica desde el contenido del archivo .p12 si no
         // se pasaron como datos del arreglo de configuración
-        if (!$this->config['data'] and $this->config['file']) {
-            if (is_readable($this->config['file'])) {
-                $this->config['data'] = file_get_contents($this->config['file']);
-            } else {
-                return $this->error('Archivo de la firma electrónica '.basename($this->config['file']).' no puede ser leído');
-            }
-        }
+        $this->config['data'] = $this->config['file'];
+
         // leer datos de la firma electrónica
         if ($this->config['data'] and openssl_pkcs12_read($this->config['data'], $this->certs, $this->config['pass'])===false) {
             return $this->error('No fue posible leer los datos de la firma electrónica (verificar la contraseña)');
